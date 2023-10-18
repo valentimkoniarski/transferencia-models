@@ -1,4 +1,4 @@
-package dev.valentim;
+package dev.valentim.key;
 
 import lombok.Getter;
 import lombok.Setter;

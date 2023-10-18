@@ -1,6 +1,6 @@
-package dev.valentim.repository;
+package dev.valentim.key.repository;
 
-import dev.valentim.Key;
+import dev.valentim.key.Key;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
-package dev.valentim.dto;
+package dev.valentim.transferencia.dto;
 
-import dev.valentim.enuns.TransferenciaStatus;
+import dev.valentim.transferencia.enuns.TransferenciaStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
