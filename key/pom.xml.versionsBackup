@@ -6,10 +6,11 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.0</version>
+        <version>1.0.3</version>
+
     </parent>
 
-    <artifactId>transferencia</artifactId>
+    <artifactId>key</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -29,19 +30,13 @@
             <version>1.18.28</version>
             <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-commons</artifactId>
-            <version>2.7.15</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.7.15</version>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>3.0.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
-
 
 </project>

@@ -24,6 +24,8 @@ public class Transferencia {
     @Enumerated(EnumType.STRING)
     private TransferenciaStatus status;
 
+
+
     public static Transferencia toEntity(TransferenciaDto pixDTO) {
         Transferencia transferencia = new Transferencia();
         transferencia.setIdentifier(pixDTO.getIdentifier());

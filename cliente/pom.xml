@@ -7,9 +7,10 @@
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
         <version>1.2.0</version>
+
     </parent>
 
-    <artifactId>transferencia</artifactId>
+    <artifactId>cliente</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -30,18 +31,35 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-commons</artifactId>
-            <version>2.7.15</version>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.valentim</groupId>
+            <artifactId>key</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.valentim.usuario</groupId>
+            <artifactId>usuario</artifactId>
+            <version>1.0.1</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.7.15</version>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.7.6</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.valentim.usuario</groupId>
+            <artifactId>usuario</artifactId>
+            <version>1.1.9</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
-
-
-
 
 </project>
