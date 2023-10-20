@@ -16,15 +16,19 @@ public class Transferencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String identifier;
+
     private String chaveOrigem;
+
     private String chaveDestino;
+
     private Double valor;
+
     private LocalDateTime dataTransferencia;
+
     @Enumerated(EnumType.STRING)
     private TransferenciaStatus status;
-
-
 
     public static Transferencia toEntity(TransferenciaDto pixDTO) {
         Transferencia transferencia = new Transferencia();
