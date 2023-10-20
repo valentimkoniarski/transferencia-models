@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -15,13 +16,13 @@ public class Transferencia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-    private String identifier;
+    private Long identifier;
 
-    private String chaveOrigem;
+    private UUID chaveOrigem;
 
-    private String chaveDestino;
+    private UUID chaveDestino;
 
     private Double valor;
 

@@ -6,14 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 @Setter
 @NoArgsConstructor
 public class TransferenciaDto {
-    private String identifier;
-    private String chaveOrigem;
-    private String chaveDestino;
+    private Long identifier;
+    private UUID chaveOrigem;
+    private UUID chaveDestino;
     private Double valor;
     private LocalDateTime dataTransferencia;
     private TransferenciaStatus status;

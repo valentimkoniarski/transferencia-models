@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.7</version> <!-- A nova versão desejada -->
+        <version>1.2.8</version> <!-- A nova versão desejada -->
     </parent>
 
     <groupId>dev.valentim.usuario</groupId>
