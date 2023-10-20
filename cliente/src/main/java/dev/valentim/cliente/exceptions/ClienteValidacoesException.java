@@ -17,4 +17,10 @@ public class ClienteValidacoesException extends RuntimeException {
             super("O saldo inicial do cliente deve ser zero");
         }
     }
+
+    public static class KeyExistenteException extends ClienteValidacoesException {
+        public KeyExistenteException() {
+            super("Já existe uma chave para o usuário informado");
+        }
+    }
 }

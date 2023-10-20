@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.6</version>
 
     </parent>
 
@@ -58,6 +58,12 @@
             <groupId>dev.valentim.usuario</groupId>
             <artifactId>usuario</artifactId>
             <version>1.1.9</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>dev.valentim</groupId>
+            <artifactId>key</artifactId>
+            <version>1.2.6</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

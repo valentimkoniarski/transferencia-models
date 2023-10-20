@@ -26,7 +26,7 @@ public class Cliente {
     @JoinColumn(name = "usuario_id", unique = true)
     private Usuario usuario;
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "key_id", unique = true)
     private Key key;
 

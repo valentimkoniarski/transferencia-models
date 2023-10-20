@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.0</version>
+        <version>1.2.6</version>
 
     </parent>
 
@@ -32,9 +32,14 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>3.0.0</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.7.15</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.valentim</groupId>
+            <artifactId>cliente</artifactId>
+            <version>1.2.5</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

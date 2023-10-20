@@ -1,8 +1,9 @@
 package dev.valentim.cliente;
 
 import dev.valentim.cliente.validacoes.SaldoInicialMil;
+import dev.valentim.cliente.validacoes.SomenteUmClientePorKey;
+import dev.valentim.cliente.validacoes.SomenteUmClientePorUsuario;
 import dev.valentim.cliente.validacoes.ValidacaoCriacaoDoCliente;
-import dev.valentim.usuario.Usuario;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
@@ -35,13 +36,12 @@ public class ClienteService {
     private List<ValidacaoCriacaoDoCliente> setValidacoes() {
         List<ValidacaoCriacaoDoCliente> listaDeValidacoes = new ArrayList<>();
         listaDeValidacoes.add(new SaldoInicialMil());
-        //listaDeValidacoes.add(new SomenteUmClientePorUsuario(clienteRepository));
+        listaDeValidacoes.add(new SomenteUmClientePorUsuario(clienteRepository));
+        listaDeValidacoes.add(new SomenteUmClientePorKey(clienteRepository));
         return listaDeValidacoes;
     }
 
     private void validacoes(Cliente cliente) {
-        validacoes.forEach(validacao -> {
-            validacao.validacao(cliente);
-        });
+        validacoes.forEach(validacao -> validacao.validacao(cliente));
     }
 }

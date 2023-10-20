@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>dev.valentim</groupId>
     <artifactId>models</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.6</version>
     <packaging>pom</packaging>
 
     <!--

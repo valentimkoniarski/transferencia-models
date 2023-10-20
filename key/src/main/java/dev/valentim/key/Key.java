@@ -1,19 +1,23 @@
 package dev.valentim.key;
 
+import dev.valentim.cliente.Cliente;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
 public class Key {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String chave;
+    private Long id;
+
+    private UUID chave;
+
+    @OneToOne(mappedBy = "key")
+    private Cliente cliente;
 }
