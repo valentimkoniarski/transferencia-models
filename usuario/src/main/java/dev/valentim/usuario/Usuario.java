@@ -1,6 +1,7 @@
 package dev.valentim.usuario;
 
 
+import dev.valentim.key.Key;
 import dev.valentim.usuario.enums.TipoUsuarioEnum;
 import dev.valentim.usuario.enums.UsuarioRole;
 
@@ -26,6 +27,9 @@ public class Usuario implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Embedded
+    private Key key;
 
     @NotNull
     private String nome;

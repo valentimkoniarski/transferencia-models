@@ -1,23 +1,21 @@
 package dev.valentim.key;
 
-import dev.valentim.cliente.Cliente;
+import com.sun.istack.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.UUID;
 
-@Entity
+@Embeddable
 @Getter
 @Setter
 public class Key {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @Column(name = "chave")
     private UUID chave;
 
-    @OneToOne(mappedBy = "key")
-    private Cliente cliente;
+    public Key() {
+        this.chave = UUID.randomUUID();
+    }
 }

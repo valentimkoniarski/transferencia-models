@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 public class UsuarioDto {
@@ -17,4 +19,6 @@ public class UsuarioDto {
     private String email;
     @NotNull
     private String senha;
+    @NotNull
+    private UUID chave = UUID.randomUUID();
 }

@@ -1,6 +1,7 @@
 package dev.valentim.usuario;
 
 
+import dev.valentim.key.Key;
 import dev.valentim.usuario.dto.UsuarioDto;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,10 +11,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpSession;
+import java.util.UUID;
 
 @Service
 public class UsuarioService implements UserDetailsService {
-
 
     private final UsuarioRepository usuarioRepository;
 
@@ -21,17 +22,13 @@ public class UsuarioService implements UserDetailsService {
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    private final HttpSession session;
-
     @Autowired
     public UsuarioService(UsuarioRepository usuarioRepository,
                           ModelMapper modelMapper,
-                          BCryptPasswordEncoder bCryptPasswordEncoder,
-                          HttpSession session) {
+                          BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.usuarioRepository = usuarioRepository;
         this.modelMapper = modelMapper;
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
-        this.session = session;
     }
 
     @Override
@@ -43,10 +40,9 @@ public class UsuarioService implements UserDetailsService {
 
     public void registrarUsuario(UsuarioDto usuarioDto) {
         criptografarSenha(usuarioDto);
+        usuarioDto.setChave(UUID.randomUUID());
         final Usuario usuario = modelMapper.map(usuarioDto, Usuario.class);
-
-        session.getAttribute("usuario");
-
+        usuario.setKey(new Key());
         usuarioRepository.save(usuario);
     }
 
