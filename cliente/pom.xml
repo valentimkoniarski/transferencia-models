@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.8</version>
+        <version>1.6.0</version>
 
     </parent>
 
@@ -37,33 +37,21 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>dev.valentim</groupId>
-            <artifactId>key</artifactId>
-            <version>1.0.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>dev.valentim.usuario</groupId>
-            <artifactId>usuario</artifactId>
-            <version>1.0.1</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>2.7.6</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.7.15</version>
+        </dependency>
         <dependency>
             <groupId>dev.valentim.usuario</groupId>
             <artifactId>usuario</artifactId>
-            <version>1.1.9</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>dev.valentim</groupId>
-            <artifactId>key</artifactId>
-            <version>1.2.6</version>
+            <version>1.6.0</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

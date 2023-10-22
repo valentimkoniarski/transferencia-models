@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.valentim</groupId>
         <artifactId>models</artifactId>
-        <version>1.2.8</version>
+        <version>1.6.0</version>
 
     </parent>
 
@@ -36,12 +36,13 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>2.7.15</version>
         </dependency>
+
         <dependency>
-            <groupId>dev.valentim</groupId>
-            <artifactId>cliente</artifactId>
-            <version>1.2.5</version>
-            <scope>compile</scope>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.4.4</version>
         </dependency>
+
     </dependencies>
 
 </project>
