@@ -136,7 +136,7 @@ Eusuario/src/main/java/dev/valentim/usuario/enums/TipoUsuarioEnum.java,2/d/2dd9
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
-p
-@key/src/main/java/dev/valentim/key/repository/KeyRepository.java,f/4/f4917fc68cad6ce52891213cc01ba7c1b8be1240
-^
-.key/src/main/java/dev/valentim/key/KeyDto.java,4/6/467caaa55f32345d24f03100e5904339167af780
+€
+Ptransferencia/src/main/java/dev/valentim/transferencia/dto/TransferenciaDto.java,8/7/87e0ae6bcb2654270a5e3a7f8cb90f2399fbb7cc
+Ž
+^transferencia/src/main/java/dev/valentim/transferencia/repository/TransferenciaRepository.java,3/6/36b7e39a5fdf7db9fe1c8216beb03cdceb9d29e3
