@@ -7,19 +7,20 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Repository
 public interface TransferenciaRepository extends JpaRepository<Transferencia, Integer> {
 
-    Transferencia findByIdentifier(String identifier);
+    Transferencia findByIdentifier(UUID identifier);
 
     @Modifying
     @Query(value = "UPDATE clientes SET saldo =+ saldo + ?1 WHERE usuario_id = ?2", nativeQuery = true)
-    void updateSaldoClienteRecebedor(BigDecimal saldo, Long usuarioId);
+    void updateSaldoClienteRecebedor(Double saldo, Long usuarioId);
 
     @Modifying
     @Query(value = "UPDATE clientes SET saldo =+ saldo - ?1 WHERE usuario_id = ?2", nativeQuery = true)
-    void updateSaldoClienteTransferidor(BigDecimal saldo, Long usuarioId);
+    void updateSaldoClienteTransferidor(Double saldo, Long usuarioId);
 
     //@Modifying
     //@Query(value = "UPDATE lojistas SET saldo =+ saldo + ?1 WHERE usuario_id =?2", nativeQuery = true)

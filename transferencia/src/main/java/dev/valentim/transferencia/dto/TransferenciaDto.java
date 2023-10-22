@@ -12,7 +12,7 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 public class TransferenciaDto {
-    private Long identifier;
+    private UUID identifier = UUID.randomUUID();
     private UUID chaveOrigem;
     private UUID chaveDestino;
     private Double valor;

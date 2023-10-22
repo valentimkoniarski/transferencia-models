@@ -18,7 +18,7 @@ public class Transferencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long identifier;
+    private UUID identifier;
 
     private UUID chaveOrigem;
 
