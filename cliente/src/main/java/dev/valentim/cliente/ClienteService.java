@@ -1,7 +1,6 @@
 package dev.valentim.cliente;
 
 import dev.valentim.cliente.validacoes.SaldoInicialMil;
-import dev.valentim.cliente.validacoes.SomenteUmClientePorKey;
 import dev.valentim.cliente.validacoes.SomenteUmClientePorUsuario;
 import dev.valentim.cliente.validacoes.ValidacaoCriacaoDoCliente;
 import org.modelmapper.ModelMapper;
@@ -37,7 +36,6 @@ public class ClienteService {
         List<ValidacaoCriacaoDoCliente> listaDeValidacoes = new ArrayList<>();
         listaDeValidacoes.add(new SaldoInicialMil());
         listaDeValidacoes.add(new SomenteUmClientePorUsuario(clienteRepository));
-        listaDeValidacoes.add(new SomenteUmClientePorKey(clienteRepository));
         return listaDeValidacoes;
     }
 

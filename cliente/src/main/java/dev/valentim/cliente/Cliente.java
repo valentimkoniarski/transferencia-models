@@ -1,6 +1,5 @@
 package dev.valentim.cliente;
 
-import dev.valentim.key.Key;
 import dev.valentim.usuario.Usuario;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,10 +24,4 @@ public class Cliente {
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "usuario_id", unique = true)
     private Usuario usuario;
-
-    @OneToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "key_id", unique = true)
-    private Key key;
-
-
 }
